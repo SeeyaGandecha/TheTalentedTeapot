@@ -1,0 +1,48 @@
+{{define "TTT-nav"}}
+{{/*<link rel="stylesheet" href="../css/main.css">*/}}
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111;
+    }
+    .TTT {
+        padding-top: 10px;
+     }
+    .TTT ul{
+        background: grey;
+        text-decoration-color: white;
+    }
+    .TTT li a:hover {
+        background-color: dimgrey;
+    }
+</style>
+<nav class="TTT">
+    <ul>
+        <li><a href="/TTTportfolio">Portfolio</a></li>
+        <li><a href="/TTTabout">About</a></li>
+        <li><a href="/TTTservices">Services</a></li>
+        <li><a href="/TTTevents">Events</a></li>
+        <li><a href="/TTTshop">Shop</a></li>
+        <li><a href="/TTTsm">Social Media</a></li>
+        <li><a href="/TTTcontact">Contact</a></li>
+    </ul>
+</nav>
+{{end}}

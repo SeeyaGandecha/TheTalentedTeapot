@@ -1,0 +1,19 @@
+{{template "header"  .}}
+
+<h1>
+    Login
+</h1>
+
+{{template "nav-main2"}}
+
+<form method="POST">
+    <i class="loginuser"></i>
+    <input id="email" name="user" type="email" placeholder="Enter your email">
+    <input id="password" name="password" type="password" placeholder="Enter your password">
+    <button>Submit</button>
+</form>
+<form action="/signup">
+    <input type="submit" value="Create Account" />
+</form>
+
+{{template "footer"}}

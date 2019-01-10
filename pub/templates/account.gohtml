@@ -1,0 +1,27 @@
+{{template "header"  .}}
+
+<h1>
+    Account
+</h1>
+
+{{template "nav-main2"}}
+
+        {{/*{{if .FirstName}}*/}}
+        {{/*Your Name Is {{.FirstName}}*/}}
+        {{/*{{end}}*/}}
+
+        {{/*<form action="/apply" method="post">*/}}
+            {{/*<label for="fnm">First Name</label>*/}}
+            {{/*<input type="text" name="fname" id="fnm">*/}}
+            {{/*<input type="submit">*/}}
+        {{/*</form>*/}}
+
+<form action="/login">
+    <input type="submit" value="Login" />
+</form>
+
+<form action="/signup">
+    <input type="submit" value="Create Account" />
+</form>
+
+{{template "footer"}}
