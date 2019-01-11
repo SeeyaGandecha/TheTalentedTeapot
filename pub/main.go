@@ -49,7 +49,14 @@ func main() {
 	http.HandleFunc("/login", login)
 	http.HandleFunc("/signup", signup)
 
+	http.Handle("/img/", http.StripPrefix("/img/", http.FileServer(http.Dir("./img"))))
+
+	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("./css"))))
+
+
+
 	http.ListenAndServe(":8080", nil)
+
 
 	r := httprouter.New()
 	http.Handle("/", r)

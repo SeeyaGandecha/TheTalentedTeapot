@@ -1,18 +1,22 @@
 {{define "header"}}
 
 <!DOCTYPE html>
-<html lang="en">
+<meta charset="UTF-8">
+
+<html>
 <head>
-    <meta charset="UTF-8">
+
+    {{if .FirstName}}
+        <title>{{.FirstName}}</title>
+    {{else}}
+        <title>{{.Title}}</title>
+    {{end}}
+
+
     <link rel="stylesheet" href="../css/main.css">
 
-            {{if .FirstName}}
-    <title>{{.FirstName}}</title>
-            {{else}}
-    <title>{{.Title}}</title>
-            {{end}}
 </head>
-<body>
+
 
 {{end}}
 {{/*end of header*/}}
@@ -20,8 +24,9 @@
 
 {{define "footer"}}
 
- </body>
  </html>
+<footer>
 
+</footer>
  {{end}}
 {{/*end of footer*/}}
