@@ -9,12 +9,115 @@
         width: 120px;
     }
 
+    .bannercontact{
+        width: 100%
+    }
+
+    .contacticons {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+    }
+    .icon {
+        border: 1px solid lightgrey;
+        text-align: center;
+    }
+    .imgicon{
+        height: 100px;
+    }
+    .contscroll{
+        display: grid;
+        grid-template-rows: auto;
+        padding: 20px;
+    }
+    .contsection{
+        border: 1px solid lightgrey;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .contactform{
+        grid-area: cform;
+        border-radius: 50px;
+        margin: 1% 5% 2% 5%;
+        padding-top: 3%;
+        background-color: ghostwhite;}
+
+    input[type=text], input[type=email], input[type=submit], textarea {
+        text-align: center;
+        width: 90%;
+        padding: 10px;
+        border: 2px solid slategrey;
+        border-radius: 10px;
+        box-sizing: border-box;
+        margin: 1% 5%;}
+
+    label{
+        padding-left: 0%;}
+
+    textarea{
+        height: 150px;
+    }
+
+    input[type=submit] {
+        background-color: red;
+        color: white;
+        width: 30%;
+        border: solid 2px black;
+        border-radius: 10px;
+        cursor: pointer;}
+
+    input[type=submit]:hover {
+        background: black;}
+
+
 </style>
 
 <img class="logo" src="../img/logo.png" alt="logo">
 <h1>Contact</h1>
 
 {{template "nav-main"}}
+
+<body>
+
+<img class="bannercontact" src="../img/contactbanner.jpg" alt="banner">
+
+<div class="contacticons">
+    <div class="icon"><img class="imgicon" src="../img/mail.png" alt="email"></div>
+    <div class="icon"><img class="imgicon" src="../img/link.png" alt="social media"></div>
+    <div class="icon"><img class="imgicon" src="../img/telephone.png" alt="phone"></div>
+</div>
+
+<div class="contscroll">
+    <div class="contsection">
+        <form>
+            <form class="contactform" action="mailto:seeya@gandecha.net" method="post" enctype="text/plain">
+                <label>First Name:</label>
+                <input type="text" name="firstname" placeholder="First Name" required>
+                <br>
+                <label>Last Name:</label>
+                <input type="text" name="lastname" placeholder="Last Name" required>
+                <br>
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="your@email.com" required>
+                <br>
+                <label>Subject:</label>
+                <input type="text" name="subject" placeholder="e.g. 'Booking'" required>
+                <br>
+                <label>Email Contents:</label>
+                <textarea placeholder="Description" required></textarea>
+                <br>
+                <input type="submit" value="Send Email">
+            </form>
+        </form>
+
+    </div>
+    <div class="contsection">
+        <img src="../img/facebook-logo-button.png" alt="">
+    </div>
+    <div class="contsection">3</div>
+</div>
+</body>
 
 
 {{template "footer"}}
