@@ -22,17 +22,19 @@
         border: 1px solid lightgrey;
         text-align: center;
     }
+
     .imgicon{
         height: 100px;
     }
+
     .contscroll{
         display: grid;
         grid-template-rows: auto;
         padding: 20px;
     }
     .contsection{
+        width: 100%;
         border: 1px solid lightgrey;
-        padding: 20px;
         text-align: center;
     }
 
@@ -46,7 +48,7 @@
     input[type=text], input[type=email], input[type=submit], textarea {
         text-align: center;
         width: 90%;
-        padding: 10px;
+        padding: 20px;
         border: 2px solid slategrey;
         border-radius: 10px;
         box-sizing: border-box;
@@ -69,6 +71,57 @@
 
     input[type=submit]:hover {
         background: black;}
+
+
+    .socialmediaicons {
+        display: grid;
+        text-align: center;
+        grid-template-columns: auto auto auto;
+    }
+    .smicon {
+        position: relative;
+        width: 300px;
+        border: 1px solid red;
+        padding: 10px;
+        text-align: center;
+    }
+
+
+    .smimage {
+        display: block;
+        width: 300px;
+        height: auto;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: opacity .5s linear;
+    }
+
+    .smicon:hover .overlay {
+        opacity: 1;
+    }
+    .smicon:hover .smimage {
+        transition: opacity .5s linear;
+        opacity: 0;
+    }
+
+    .swapimg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 0;
+        margin: 0;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 
 
 </style>
@@ -112,9 +165,42 @@
         </form>
 
     </div>
-    <div class="contsection">
-        <img src="../img/facebook-logo-button.png" alt="">
+
+
+
+    <div class="contsection socialmediaicons">
+
+            <div class="smicon"><a href="https://www.facebook.com/TheTalentedTeapot/" target="_blank">
+                <img src="../img/facebookblue.png" alt="facebook" class="smimage">
+                <div class="overlay">
+                    <div class="swapimg">
+                        <img src="../img/facebookred.png" alt="facebook">
+                    </div>
+                </div></a>
+            </div>
+
+        <div class="smicon"><a href="http://instagram.com/the_talented_teapot/" target="_blank">
+            <img src="../img/instagramblue.png" alt="instagram" class="smimage">
+            <div class="overlay">
+                <div class="swapimg">
+                    <img src="../img/instagramred.png" alt="intagram">
+                </div>
+            </div></a>
+        </div>
+
+        <div class="smicon"><a href="https://www.linkedin.com/company/thetalentedteapot/" target="_blank">
+            <img src="../img/linkedinblue.png" alt="linkedin" class="smimage">
+                <div class="overlay">
+                    <div class="swapimg">
+                        <img src="../img/linkedinred.png" alt="linkedin">
+                    </div>
+                </div></a>
+        </div>
+
     </div>
+
+
+
     <div class="contsection">3</div>
 </div>
 </body>
