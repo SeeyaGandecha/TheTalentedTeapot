@@ -33,7 +33,7 @@
         padding: 20px;
     }
     .contsection{
-        width: 100%;
+        width: 99%;
         border: 1px solid lightgrey;
         text-align: center;
     }
@@ -74,24 +74,18 @@
 
 
     .socialmediaicons {
-        display: grid;
+        display: inline-flex;
         text-align: center;
         grid-template-columns: auto auto auto;
     }
     .smicon {
+        width: 100%;
         position: relative;
-        width: 300px;
         border: 1px solid red;
-        padding: 10px;
+        padding: 40px;
         text-align: center;
     }
 
-
-    .smimage {
-        display: block;
-        width: 300px;
-        height: auto;
-    }
 
     .overlay {
         position: absolute;
@@ -122,7 +116,33 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
+    .information{
+        font-size: 40px;
+        width: 100%;
+    }
+    .information td {
+        width: 33.3%;
+    }
+    .or{
+        color: ghostwhite;
+        background: gray;
+    }
+    .information p{
+        text-align: right;
+    }
+    .information .link{
+        text-align: left;
+    }
+    .scroll {
+        margin:0;
+        padding-top: 0;
+        height: 100%;
+    }
 
+    .scroll{margin:0;
+    }
+
+    :target {display:block;}
 
 </style>
 
@@ -133,76 +153,96 @@
 
 <body>
 
-<img class="bannercontact" src="../img/contactbanner.jpg" alt="banner">
+    <img class="bannercontact" src="../img/contactbanner.jpg" alt="banner">
 
-<div class="contacticons">
-    <div class="icon"><img class="imgicon" src="../img/mail.png" alt="email"></div>
-    <div class="icon"><img class="imgicon" src="../img/link.png" alt="social media"></div>
-    <div class="icon"><img class="imgicon" src="../img/telephone.png" alt="phone"></div>
-</div>
+    <div class="contacticons">
+        <a href="#contform"><div class="icon"><img class="imgicon" src="../img/mail.png" alt="email"></div></a>
+        <a href="#socialmedias"><div class="icon"><img class="imgicon" src="../img/link.png" alt="social media"></div></a>
+        <a href="#info"><div class="icon"><img class="imgicon" src="../img/telephone.png" alt="phone"></div></a>
+    </div>
 
-<div class="contscroll">
-    <div class="contsection">
-        <form>
-            <form class="contactform" action="mailto:seeya@gandecha.net" method="post" enctype="text/plain">
+    <div class="contscroll">
+
+        <div class="contsection">
+            <a id="contform" class="scroll">
+                <form class="contactform" action="mailto:seeya@gandecha.net" method="post" enctype="text/plain">
                 <label>First Name:</label>
-                <input type="text" name="firstname" placeholder="First Name" required>
-                <br>
-                <label>Last Name:</label>
-                <input type="text" name="lastname" placeholder="Last Name" required>
-                <br>
-                <label>Email:</label>
-                <input type="email" name="email" placeholder="your@email.com" required>
-                <br>
-                <label>Subject:</label>
-                <input type="text" name="subject" placeholder="e.g. 'Booking'" required>
-                <br>
-                <label>Email Contents:</label>
-                <textarea placeholder="Description" required></textarea>
-                <br>
-                <input type="submit" value="Send Email">
-            </form>
-        </form>
-
-    </div>
-
+                  <input type="text" name="firstname" placeholder="First Name" required>
+                  <br>
+                  <label>Last Name:</label>
+                  <input type="text" name="lastname" placeholder="Last Name" required>
+                  <br>
+                  <label>Email:</label>
+                  <input type="email" name="email" placeholder="your@email.com" required>
+                  <br>
+                  <label>Subject:</label>
+                  <input type="text" name="subject" placeholder="e.g. 'Booking'" required>
+                  <br>
+                  <label>Email Contents:</label>
+                  <textarea placeholder="Description" required></textarea>
+                  <br>
+                  <input type="submit" value="Send Email">
+               </form>
+        </a>
+        </div>
 
 
-    <div class="contsection socialmediaicons">
 
-            <div class="smicon"><a href="https://www.facebook.com/TheTalentedTeapot/" target="_blank">
-                <img src="../img/facebookblue.png" alt="facebook" class="smimage">
-                <div class="overlay">
-                    <div class="swapimg">
-                        <img src="../img/facebookred.png" alt="facebook">
-                    </div>
-                </div></a>
-            </div>
-
-        <div class="smicon"><a href="http://instagram.com/the_talented_teapot/" target="_blank">
-            <img src="../img/instagramblue.png" alt="instagram" class="smimage">
-            <div class="overlay">
-                <div class="swapimg">
-                    <img src="../img/instagramred.png" alt="intagram">
+        <div class="contsection socialmediaicons">
+            <a id="socialmedias" class="scroll">
+                <div class="smicon"><a href="https://www.facebook.com/TheTalentedTeapot/" target="_blank">
+                    <img src="../img/facebookblue.png" alt="facebook" class="smimage">
+                    <div class="overlay">
+                        <div class="swapimg">
+                            <img src="../img/facebookred.png" alt="facebook">
+                        </div>
+                    </div></a>
                 </div>
-            </div></a>
+
+                <div class="smicon"><a href="http://instagram.com/the_talented_teapot/" target="_blank">
+                    <img src="../img/instagramblue.png" alt="instagram" class="smimage">
+                    <div class="overlay">
+                        <div class="swapimg">
+                            <img src="../img/instagramred.png" alt="intagram">
+                        </div>
+                    </div></a>
+                </div>
+
+                <div class="smicon"><a href="http://linkedin.com/company/the_talented_teapot/" target="_blank">
+                        <img src="../img/linkedinblue.png" alt="linkedin" class="smimage">
+                        <div class="overlay">
+                            <div class="swapimg">
+                                <img src="../img/linkedinred.png" alt="linkedin">
+                            </div>
+                        </div></a>
+                </div>
+            </a>
         </div>
 
-        <div class="smicon"><a href="https://www.linkedin.com/company/thetalentedteapot/" target="_blank">
-            <img src="../img/linkedinblue.png" alt="linkedin" class="smimage">
-                <div class="overlay">
-                    <div class="swapimg">
-                        <img src="../img/linkedinred.png" alt="linkedin">
-                    </div>
-                </div></a>
-        </div>
 
+
+        <div class="contsection">
+            <a id="info" class="scroll">
+                <table class="information">
+                    <tr>
+                        <td><p>Email us at:</p></td>
+                        <td></td>
+                        <td><p class="link"><a href="mailto:seeya@gandecha.net">seeya@gandecha.net</a></p></td>
+                    </tr>
+                    <tr class="or">
+                        <td colspan="3">Or</td>
+                    </tr>
+                    <tr>
+                        <td><p>Call us on:</p></td>
+                        <td></td>
+                        <td><p class="link"><a href="tel:+447910453483">07910453483</a></p></td>
+                    </tr>
+
+                </table>
+            </a>
+        </div>
     </div>
 
-
-
-    <div class="contsection">3</div>
-</div>
 </body>
 
 
