@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5ecf39b-9b1a-4839-bcf2-04187b49fd1a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pub/img/facebook-logo-button.png" beforeDir="false" afterPath="$PROJECT_DIR$/pub/img/facebookblue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pub/img/instagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/pub/img/instagramblue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pub/img/linkedin.png" beforeDir="false" afterPath="$PROJECT_DIR$/pub/img/linkedinblue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pub/templates/contact.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/pub/templates/contact.gohtml" afterDir="false" />
-    </list>
+    <list default="true" id="f5ecf39b-9b1a-4839-bcf2-04187b49fd1a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
