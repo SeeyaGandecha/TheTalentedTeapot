@@ -1,15 +1,15 @@
 package main
 
 import (
-	"html/template"
-	"log"
-	"net/http"
-	"io/ioutil"
 	"fmt"
-	"httprouter"
-	stdlog "log"
-	"google.golang.org/appengine/datastore"
 	"google.golang.org/appengine"
+	"google.golang.org/appengine/datastore"
+	"html/template"
+	"httprouter"
+	"io/ioutil"
+	"log"
+	stdlog "log"
+	"net/http"
 )
 
 var tpl *template.Template
@@ -53,16 +53,12 @@ func main() {
 
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("./css"))))
 
-
-
 	http.ListenAndServe(":8080", nil)
-
 
 	r := httprouter.New()
 	http.Handle("/", r)
 	r.POST("/api/checkusername", checkUserName)
 	r.POST("/api/createuser", createUser)
-
 
 }
 

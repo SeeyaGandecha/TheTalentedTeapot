@@ -1,12 +1,137 @@
 {{template "header" .}}
 <style>
 
+    main {
+        background: lightgrey;
+    }
+
     .logo{
 
         position: absolute;
         top: 7px;
         right: 15px;
         width: 120px;
+    }
+
+    .main{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+                "albumselect" "galleries"
+    }
+
+    .albumselect{
+        margin: 2% 1% 0 2%;
+        padding: 1% 0;
+        border-radius: 50px;
+        grid-area: albumselect;
+        background: white;
+        font-size: 25px;
+        text-align: center;}
+
+    .galleries {
+        border-radius: 50px;
+        grid-template-columns: repeat(4, auto);
+        display: grid;
+        background: white;
+        padding: 1%;
+        margin: 2%;
+        justify-content: space-around;
+    }
+    .album{
+        padding: 10px;
+        position: relative;
+        width: 200px;
+    }
+
+    .albumimage{
+        display: block;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        transition: 1.5s;}
+
+    .texthover {
+        position: absolute;
+        text-align: center;
+        transition: 1.5s;
+        opacity: 0;
+        top: 50%;
+        left: 50%;}
+
+    .text {
+        background-color: none;
+        text-align: center;
+        padding: auto;
+        color: black;
+        font-size: 30px;}
+
+    .texthover {
+        position: absolute;
+        text-align: center;
+        opacity: 0;
+        transition: 1.5s;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);}
+
+    .album:hover .albumimage {
+        opacity: 0.1;}
+
+    .album:hover .texthover {
+        opacity: 1;}
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 2%;
+    }
+
+    .col {
+        flex: 20%;
+        max-width: 20%;
+        padding: 0;}
+
+    .col img {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;}
+
+    .tttimages{
+        display: none;}
+
+    /*album ttt page navigation*/
+
+    .page {
+        display: none;
+        margin:0px;
+        padding-top: 0px;
+        height: 100%;}
+
+    .page{margin:0px;}
+
+    :target {display:block;}
+
+    /*scroll button ttt page*/
+    .topbtn {
+        display: block;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 99;
+        outline: none;
+        color: white;
+        font-size: 35px;
+        background-color: black;
+        cursor: pointer;
+        padding: 0 10px 5px 10px;
+        border-radius: 20px;
+    }
+
+    .topbtn:hover{
+        background-color: red;
+        border: solid 2px black;
     }
 
 </style>
@@ -17,4 +142,622 @@
 {{template "nav-main"}}
 {{template "TTT-nav"}}
 
+<body>
+ <main class="main">
+
+    <p class="albumselect">Select An Album To View</p>
+
+    <!-- gallary naviation -->
+
+    <div class="galleries">
+
+
+        <div class="album" id="amsterdam">
+            <a href="#page1">
+                <img src="../img/TTTgalleries/amsterdam/amsterdam26.jpg" alt="Avatar" class="albumimage">
+                <div class="texthover">
+                    <div class="text">Amsterdam</div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="album" id="brussels">
+            <a href="#page2">
+                <img src="../img/TTTgalleries/brussels/brussels74.jpg" alt="brussels" class="albumimage">
+                <div class="texthover">
+                    <div class="text">Brussels</div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="album" id="horror">
+            <a href="#page3">
+                <img src="../img/TTTgalleries/horror/horror8.jpg" alt="disguise" class="albumimage">
+                <div class="texthover">
+                    <div class="text">Horror</div>
+                </div>
+            </a>
+        </div>
+
+
+
+        <div class="album" id="italy">
+            <a href="#page4">
+                <img src="../img/TTTgalleries/italy/italy137.jpg" alt="italy" class="albumimage">
+                <div class="texthover">
+                    <div class="text">Italy</div>
+                </div>
+            </a>
+        </div>
+
+
+
+        <div class="album" id="leipzig">
+            <a href="#page5">
+                <img src="../img/TTTgalleries/leipzig/leipzig183.jpg" alt="leipzig" class="albumimage">
+                <div class="texthover">
+                    <div class="text">Leipzig</div>
+                </div>
+            </a>
+        </div>
+
+
+
+        <div class="album" id="madrid">
+            <a href="#page6">
+                <img src="../img/TTTgalleries/madrid/madrid19.jpg" alt="madrid" class="albumimage">
+                <div class="texthover">
+                    <div class="text">Madrid</div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="album" id="prague">
+            <a href="#page7">
+                <img src="../img/TTTgalleries/prague/prague71.jpg" alt="prague" class="albumimage">
+                <div class="texthover">
+                    <div class="text">Prague</div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="album" id='models'>
+            <a href="#page8">
+                <img src="../img/TTTgalleries/simmy/models1.JPG" alt="models" class="albumimage">
+                <div class="texthover">
+                    <div class="text">Models</div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- content display -->
+
+    <div id="page1" class="page">
+        <div class="tttimages" id="displaydam">
+            <div class="row">
+                <div id="amsterdamone" class="col"></div>
+                <div id="amsterdamtwo" class="col"></div>
+                <div id="amsterdamthree" class="col"></div>
+                <div id="amsterdamfour" class="col"></div>
+                <div id="amsterdamfive" class="col"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page2" class="page">
+        <div class="tttimages" id="displaybrux">
+            <div class="row">
+                <div id="bruxone" class="col"></div>
+                <div id="bruxtwo" class="col"></div>
+                <div id="bruxthree" class="col"></div>
+                <div id="bruxfour" class="col"></div>
+                <div id="bruxfive" class="col"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page3" class="page">
+        <div class="tttimages" id="displayhorror">
+            <div class="row">
+                <div id="horrorone" class="col"></div>
+                <div id="horrortwo" class="col"></div>
+                <div id="horrorthree" class="col"></div>
+                <div id="horrorfour" class="col"></div>
+                <div id="horrorfive" class="col"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page4" class="page">
+        <div class="tttimages" id="displayitaly">
+            <div class="row">
+                <div id="italyone" class="col"></div>
+                <div id="italytwo" class="col"></div>
+                <div id="italythree" class="col"></div>
+                <div id="italyfour" class="col"></div>
+                <div id="italyfive" class="col"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page5" class="page">
+        <div class="tttimages" id="displayleipzig">
+            <div class="row">
+                <div id="leipone" class="col"></div>
+                <div id="leiptwo" class="col"></div>
+                <div id="leipthree" class="col"></div>
+                <div id="leipfour" class="col"></div>
+                <div id="leipfive" class="col"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page6" class="page">
+        <div class="tttimages" id="displaymadrid">
+            <div class="row">
+                <div id="madone" class="col"></div>
+                <div id="madtwo" class="col"></div>
+                <div id="madthree" class="col"></div>
+                <div id="madfour" class="col"></div>
+                <div id="madfive" class="col"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page7" class="page">
+        <div class="tttimages" id="displayprague">
+            <div class="row">
+                <div id="prahaone" class="col"></div>
+                <div id="prahatwo" class="col"></div>
+                <div id="prahathree" class="col"></div>
+                <div id="prahafour" class="col"></div>
+                <div id="prahafive" class="col"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="page8" class="page">
+        <div class="tttimages" id="displaymodels">
+            <div class="row">
+                <div id="modone" class="col"></div>
+                <div id="modtwo" class="col"></div>
+                <div id="modthree" class="col"></div>
+                <div id="modfour" class="col"></div>
+                <div id="modfive" class="col"></div>
+            </div>
+        </div>
+    </div>
+
+    <button class="topbtn" id="topbtn" title="Go to top">&#8679;</button>
+
+    </main>
+ <script>
+     "use strict";
+
+     //amsterdam image population
+
+     let am1 = document.getElementById('amsterdamone');
+     let am2 = document.getElementById('amsterdamtwo');
+     let am3 = document.getElementById('amsterdamthree');
+     let am4 = document.getElementById('amsterdamfour');
+     let am5 = document.getElementById('amsterdamfive');
+
+     let damimages = 66;
+
+     for (let i = 1; i < 13; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/amsterdam/amsterdam' + i + '.jpg');
+         am1.appendChild(node);
+     }
+     for (let i = 13; i < 26; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/amsterdam/amsterdam' + i + '.jpg');
+         am2.appendChild(node);
+     }
+     for (let i = 26; i < 39; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/amsterdam/amsterdam' + i + '.jpg');
+         am3.appendChild(node);
+     }
+     for (let i = 39; i < 52; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/amsterdam/amsterdam' + i + '.jpg');
+         am4.appendChild(node);
+     }
+     for (let i = 52; i < damimages; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/amsterdam/amsterdam' + i + '.jpg');
+         am5.appendChild(node);
+     }
+
+     //amsterdam display
+     const dam = document.getElementById("amsterdam");
+
+     function amsterdam() {
+         document.getElementById("displaydam").style.display = "block";
+     }
+     dam.addEventListener("click", amsterdam);
+
+
+
+     //brussels image population
+
+     let brux1 = document.getElementById('bruxone');
+     let brux2 = document.getElementById('bruxtwo');
+     let brux3 = document.getElementById('bruxthree');
+     let brux4 = document.getElementById('bruxfour');
+     let brux5 = document.getElementById('bruxfive');
+
+     let bruximages = 92;
+
+     for (let i = 1; i < 20; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/brussels/brussels' + i + '.jpg');
+         brux1.appendChild(node);
+     }
+     for (let i = 20; i < 40; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/brussels/brussels' + i + '.jpg');
+         brux2.appendChild(node);
+     }
+     for (let i = 40; i < 60; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/brussels/brussels' + i + '.jpg');
+         brux3.appendChild(node);
+     }
+     for (let i = 60; i < 80; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/brussels/brussels' + i + '.jpg');
+         brux4.appendChild(node);
+     }
+     for (let i = 80; i < bruximages; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/brussels/brussels' + i + '.jpg');
+         brux5.appendChild(node);
+     }
+
+     //brussels display
+     const brux = document.getElementById("brussels");
+
+     function brussels() {
+         document.getElementById("displaybrux").style.display = "block";
+     }
+     brux.addEventListener("click", brussels);
+
+
+
+     //horror image population
+
+     let horror1 = document.getElementById('horrorone');
+     let horror2 = document.getElementById('horrortwo');
+     let horror3 = document.getElementById('horrorthree');
+     let horror4 = document.getElementById('horrorfour');
+     let horror5 = document.getElementById('horrorfive');
+
+     let horrorimages = 13;
+
+     for (let i = 1; i < 4; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/horror/horror' + i + '.jpg');
+         horror1.appendChild(node);
+     }
+     for (let i = 4; i < 7; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/horror/horror' + i + '.jpg');
+         horror2.appendChild(node);
+     }
+     for (let i = 7; i < 10; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/horror/horror' + i + '.jpg');
+         horror3.appendChild(node);
+     }
+     for (let i = 10; i < 12; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/horror/horror' + i + '.jpg');
+         horror4.appendChild(node);
+     }
+     for (let i = 12; i < horrorimages; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/horror/horror' + i + '.jpg');
+         horror5.appendChild(node);
+     }
+
+     //horror display
+     const horror = document.getElementById("horror");
+
+     function horr() {
+         document.getElementById("displayhorror").style.display = "block";
+     }
+     horror.addEventListener("click", horr);
+
+
+
+     //italy image population
+
+     let italy1 = document.getElementById('italyone');
+     let italy2 = document.getElementById('italytwo');
+     let italy3 = document.getElementById('italythree');
+     let italy4 = document.getElementById('italyfour');
+     let italy5 = document.getElementById('italyfive');
+
+     let itimages = 439;
+
+     for (let i = 1; i < 100; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/italy/italy' + i + '.jpg');
+         italy1.appendChild(node);
+     }
+     for (let i = 100; i <200; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/italy/italy' + i + '.jpg');
+         italy2.appendChild(node);
+     }
+     for (let i = 200; i < 300; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/italy/italy' + i + '.jpg');
+         italy3.appendChild(node);
+     }
+     for (let i = 300; i < 400; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/italy/italy' + i + '.jpg');
+         italy4.appendChild(node);
+     }
+     for (let i = 400; i < itimages; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/italy/italy' + i + '.jpg');
+         italy5.appendChild(node);
+     }
+
+     //italy display
+     const italy = document.getElementById("italy");
+
+     function it() {
+         document.getElementById("displayitaly").style.display = "block";
+     }
+     italy.addEventListener("click", it);
+
+
+
+     //leipzig image population
+
+     let leip1 = document.getElementById('leipone');
+     let leip2 = document.getElementById('leiptwo');
+     let leip3 = document.getElementById('leipthree');
+     let leip4 = document.getElementById('leipfour');
+     let leip5 = document.getElementById('leipfive');
+
+     let leipzigimages = 189;
+
+     for (let i = 1; i < 37; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/leipzig/leipzig' + i + '.jpg');
+         leip1.appendChild(node);
+     }
+     for (let i =37; i < 75; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/leipzig/leipzig' + i + '.jpg');
+         leip2.appendChild(node);
+     }
+     for (let i = 75; i < 110; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/leipzig/leipzig' + i + '.jpg');
+         leip3.appendChild(node);
+     }
+     for (let i = 110; i < 150; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/leipzig/leipzig' + i + '.jpg');
+         leip4.appendChild(node);
+     }
+     for (let i = 150; i < leipzigimages; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/leipzig/leipzig' + i + '.jpg');
+         leip5.appendChild(node);
+     }
+
+     //leipzig display
+     const leip = document.getElementById("leipzig");
+
+     function leipzig() {
+         document.getElementById("displayleipzig").style.display = "block";
+     }
+     leip.addEventListener("click", leipzig);
+
+
+     //madrid image population
+
+     let mad1 = document.getElementById('madone');
+     let mad2 = document.getElementById('madtwo');
+     let mad3 = document.getElementById('madthree');
+     let mad4 = document.getElementById('madfour');
+     let mad5 = document.getElementById('madfive');
+
+     let madridimages = 72;
+
+     for (let i = 1; i < 15; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/madrid/madrid' + i + '.jpg');
+         mad1.appendChild(node);
+     }
+     for (let i = 15; i < 30; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/madrid/madrid' + i + '.jpg');
+         mad2.appendChild(node);
+     }
+     for (let i = 30; i < 45; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/madrid/madrid' + i + '.jpg');
+         mad3.appendChild(node);
+     }
+     for (let i = 45; i < 55 ; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/madrid/madrid' + i + '.jpg');
+         mad4.appendChild(node);
+     }
+     for (let i = 55; i < madridimages; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/madrid/madrid' + i + '.jpg');
+         mad5.appendChild(node);
+     }
+
+     //madrid display
+     const madrid = document.getElementById("madrid");
+
+     function mad() {
+         document.getElementById("displaymadrid").style.display = "block";
+     }
+     madrid.addEventListener("click", mad);
+
+
+     //prague image population
+
+     let praha1 = document.getElementById('prahaone');
+     let praha2 = document.getElementById('prahatwo');
+     let praha3 = document.getElementById('prahathree');
+     let praha4 = document.getElementById('prahafour');
+     let praha5 = document.getElementById('prahafive');
+
+     let pragueimages = 72;
+
+     for (let i = 1; i < 15; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/prague/prague' + i + '.jpg');
+         praha1.appendChild(node);
+     }
+     for (let i = 15; i < 30; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/prague/prague' + i + '.jpg');
+         praha2.appendChild(node);
+     }
+     for (let i = 30; i < 45; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/prague/prague' + i + '.jpg');
+         praha3.appendChild(node);
+     }
+     for (let i = 45; i < 55 ; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/prague/prague' + i + '.jpg');
+         praha4.appendChild(node);
+     }
+     for (let i = 55; i < pragueimages; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/prague/prague' + i + '.jpg');
+         praha5.appendChild(node);
+     }
+
+     //prague display
+     const praha = document.getElementById("prague");
+
+     function prague() {
+         document.getElementById("displayprague").style.display = "block";
+     }
+     praha.addEventListener("click", prague);
+
+
+     //models image population
+
+     let mod1 = document.getElementById('modone');
+     let mod2 = document.getElementById('modtwo');
+     let mod3 = document.getElementById('modthree');
+     let mod4 = document.getElementById('modfour');
+     let mod5 = document.getElementById('modfive');
+
+     let modelimages = 28;
+
+     for (let i = 1; i < 6; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/simmy/models' + i + '.JPG');
+         mod1.appendChild(node);
+     }
+     for (let i = 6; i < 12; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/simmy/models' + i + '.JPG');
+         mod2.appendChild(node);
+     }
+     for (let i = 12; i < 18; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/simmy/models' + i + '.JPG');
+         mod3.appendChild(node);
+     }
+     for (let i = 18; i < 23 ; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/simmy/models' + i + '.JPG');
+         mod4.appendChild(node);
+     }
+     for (let i = 23; i < modelimages; i++) {
+
+         let node = new Image();
+         node.setAttribute('src','../img/TTTgalleries/simmy/models' + i + '.JPG');
+         mod5.appendChild(node);
+     }
+
+     //models display
+     const mods = document.getElementById("models");
+
+     function models() {
+         document.getElementById("displaymodels").style.display = "block";
+     }
+     mods.addEventListener("click", models);
+
+
+     // scroll button ttt page
+     const btn = document.getElementById("topbtn");
+     function topbtn() {
+         document.body.scrollTop = 0;
+         document.documentElement.scrollTop = 0;
+     }
+     btn.addEventListener("click", topbtn);
+
+
+
+
+ </script>
+
 {{template "footer"}}
+</body>
