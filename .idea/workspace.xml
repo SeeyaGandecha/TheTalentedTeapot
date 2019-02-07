@@ -4,6 +4,7 @@
     <list default="true" id="f5ecf39b-9b1a-4839-bcf2-04187b49fd1a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pub/templates/TTTevents.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/pub/templates/TTTevents.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/templates/contact.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/pub/templates/contact.gohtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +14,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pub/templates/contact.gohtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pub/main.go">
           <provider selected="true" editor-type-id="text-editor">
@@ -25,8 +35,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pub/templates/TTTevents.gohtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+            <state relative-caret-position="165">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
+              <folding>
+                <element signature="e#1086#1105#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,7 +110,6 @@
         <option value="$PROJECT_DIR$/pub/templates/login.gohtml" />
         <option value="$PROJECT_DIR$/pub/templates/forum.gohtml" />
         <option value="$PROJECT_DIR$/pub/templates/account.gohtml" />
-        <option value="$PROJECT_DIR$/pub/templates/contact.gohtml" />
         <option value="$PROJECT_DIR$/pub/js/js_tttportfolio.js" />
         <option value="$PROJECT_DIR$/pub/templates/TTTportfolio.gohtml" />
         <option value="$PROJECT_DIR$/pub/templates/TTTabout.gohtml" />
@@ -108,6 +120,7 @@
         <option value="$PROJECT_DIR$/pub/templates/includes-TTT-nav.gohtml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/pub/main.go" />
+        <option value="$PROJECT_DIR$/pub/templates/contact.gohtml" />
         <option value="$PROJECT_DIR$/pub/templates/TTTevents.gohtml" />
       </list>
     </option>
@@ -405,13 +418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pub/templates/contact.gohtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pub/templates/includes-nav-main.gohtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -464,10 +470,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pub/templates/contact.gohtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pub/templates/TTTevents.gohtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+        <state relative-caret-position="165">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="e#1086#1105#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
