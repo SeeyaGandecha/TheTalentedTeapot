@@ -8,6 +8,30 @@
         right: 15px;
         width: 120px;
     }
+    .eventsmain{
+        background-color: lightgrey;
+        display: grid;
+        grid-template-columns: 50%;
+        grid-template-rows: 100%;
+        grid-template-areas:
+                "abouttext insta";}
+
+    .eventstext{
+        grid-area: abouttext;
+        padding: 3%;
+        margin: 2% 1% 2% 10%;
+        border-radius: 50px;
+        text-align: center;
+        background: ghostwhite;}
+
+    .insta{
+        grid-area: insta;
+        text-align: center;
+        padding: 3%;
+        border-radius: 50px;
+        margin: 2% 10% 2% 1%;
+        background: ghostwhite;}
+
 
 </style>
 
@@ -17,8 +41,25 @@
 {{template "nav-main"}}
 {{template "TTT-nav"}}
 
-<a id="TTE-a8629601-0330-462b-bfc4-acf2c828d92c" href="https://10to8.com/book/hkiuwtgbfeabmxoszwxkg-free/" target="_blank">See Online Booking Page</a>
-<script src="https://d3saea0ftg7bjt.cloudfront.net/embed/js/embed.min.js"></script> <script> window.TTE.init({ targetDivId: "TTE-a8629601-0330-462b-bfc4-acf2c828d92c", uuid: "a8629601-0330-462b-bfc4-acf2c828d92c", backgroundColor: "rgba(211, 211, 211, 255)", materialColor: "rgba(101, 254, 255, 1)", }); </script>
+<main class="eventsmain">
+    <div class="eventstext">
+        <p>BOOKING STUFF HERE</p>
+        <p>
+            1234567890
+        </p>
+    </div>
+    <div class="insta">
+
+        <a id="TTE-a8629601-0330-462b-bfc4-acf2c828d92c" href="https://10to8.com/book/hkiuwtgbfeabmxoszwxkg-free/" target="_blank">See Online Booking Page</a>
+        <script src="https://d3saea0ftg7bjt.cloudfront.net/embed/js/embed.min.js"></script>
+        <script> window.TTE.init({ targetDivId: "TTE-a8629601-0330-462b-bfc4-acf2c828d92c", uuid: "a8629601-0330-462b-bfc4-acf2c828d92c", backgroundColor: "rgba(248, 248, 255, 255)", }); </script>
+
+    </div>
+
+
+
+
+</main>
 
 
 
