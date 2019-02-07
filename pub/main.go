@@ -40,7 +40,7 @@ func main() {
 	http.HandleFunc("/contact", cntct)
 	http.HandleFunc("/account", acct)
 	http.HandleFunc("/TTTabout", TTTabt)
-	http.HandleFunc("/TTTcontact", TTTcnt)
+	http.HandleFunc("/TTTfeedback", TTTfdbk)
 	http.HandleFunc("/TTTevents", TTTevents)
 	http.HandleFunc("/TTTshop", TTTshop)
 	http.HandleFunc("/TTTportfolio", TTTport)
@@ -193,13 +193,13 @@ func TTTabt(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-func TTTcnt(w http.ResponseWriter, req *http.Request) {
+func TTTfdbk(w http.ResponseWriter, req *http.Request) {
 
 	pd := PageData{
 		Title: "Contact",
 	}
 
-	err := tpl.ExecuteTemplate(w, "TTTcontact.gohtml", pd)
+	err := tpl.ExecuteTemplate(w, "TTTfeedback.gohtml", pd)
 	if err != nil {
 		log.Println(err)
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
