@@ -25,14 +25,45 @@
         text-align: center;
         background: ghostwhite;}
 
-    .insta{
-        grid-area: insta;
+    .contsection{
+        width: 100%;
+        border: 1px solid lightgrey;
         text-align: center;
-        padding: 3%;
-        border-radius: 50px;
-        margin: 2% 10% 2% 1%;
-        background: ghostwhite;}
+    }
 
+    .contactform{
+        grid-area: cform;
+        border-radius: 50px;
+        margin: 1% 5% 2% 5%;
+        padding-top: 3%;
+        background-color: ghostwhite;}
+
+    input[type=text], input[type=email], input[type=submit], textarea {
+        text-align: center;
+        width: 90%;
+        padding: 20px;
+        border: 2px solid slategrey;
+        border-radius: 10px;
+        box-sizing: border-box;
+        margin: 1% 5%;}
+
+    label{
+        padding-left: 0;}
+
+    textarea{
+        height: 150px;
+    }
+
+    input[type=submit] {
+        background-color: red;
+        color: white;
+        width: 30%;
+        border: solid 2px black;
+        border-radius: 10px;
+        cursor: pointer;}
+
+    input[type=submit]:hover {
+        background: black;}
 
 
 </style>
@@ -48,15 +79,36 @@
     <div class="conttext">
         <p>CONTACT US HERE</p>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porta est tellus, a convallis eros rhoncus ut. Donec id dolor in nisl vehicula sodales. Etiam elementum cursus ex eget condimentum. Sed nisi neque, sagittis malesuada purus non, lacinia imperdiet felis. Ut eros ex, gravida nec dui nec, feugiat interdum nunc. Vivamus vestibulum ullamcorper mattis. Proin rhoncus elit eu augue auctor iaculis. Suspendisse aliquam orci suscipit libero laoreet consectetur. Duis imperdiet odio quis efficitur pretium. Sed quis pharetra lectus. Vestibulum sem justo, lacinia id ante id, vestibulum finibus dolor. In diam metus, dictum et sem auctor, pretium sollicitudin massa. Vivamus bibendum dui in orci aliquet fermentum. Donec semper enim augue. Vestibulum mauris nisl, feugiat nec erat sed, tincidunt tristique velit. Fusce venenatis vulputate arcu non fringilla.
-            Cras sollicitudin faucibus erat eget tristique. Pellentesque finibus sem luctus eleifend congue. Fusce scelerisque leo sed rhoncus dapibus. Sed a malesuada lectus. Nunc eu mi ultricies, hendrerit mauris eget, consectetur elit. Nam in nisl congue, placerat mi in, luctus libero. Etiam accumsan tellus in risus finibus maximus.
-            Pellentesque malesuada vestibulum tortor, a commodo sem rutrum in. Sed nibh magna, feugiat at enim id, venenatis fringilla est. Aliquam eget dignissim massa, eget placerat ipsum. Praesent bibendum, nisl sed tempus pharetra, lorem libero fringilla nunc, ac dignissim neque erat in odio. Duis sed faucibus nulla. Vestibulum ut euismod orci, pulvinar molestie lacus. Suspendisse ut faucibus purus, rhoncus mattis nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce lectus dolor, tempor ac dolor vel, elementum venenatis enim. Duis tempor vel lorem quis auctor. Nam eget nunc in tortor interdum mollis. Fusce vitae porttitor libero. Donec luctus, sapien ut lobortis consequat, ex odio viverra risus, eu molestie odio nisi in risus. Nam ac porttitor risus, in ultrices nulla. Aliquam laoreet turpis a velit sodales cursus. Etiam egestas nisi nisi, in vestibulum ipsum pharetra imperdiet.
-            Curabitur finibus, enim a imperdiet blandit, lectus ex imperdiet turpis, eu dictum eros neque eu turpis. Sed non metus accumsan, semper mi vel, mattis arcu. Duis sagittis quam sit amet sem finibus dapibus. Mauris dictum ex scelerisque diam auctor imperdiet. Quisque a volutpat nibh. In mauris est, eleifend vel pharetra ut, sollicitudin vitae leo. Phasellus sit amet fringilla tellus, nec sagittis lorem. Nam ut sapien quis ipsum consectetur scelerisque a quis lorem. Nam eleifend elementum lacus ac sodales.
-            Aenean nibh nisi, fringilla rhoncus nibh nec, consequat luctus odio. Fusce ut sodales est, ac tempor urna. Nullam tellus leo, tincidunt eu elit nec, ornare interdum nisl. Curabitur feugiat sed neque sed varius. Nunc feugiat malesuada metus ut aliquam. Nam dictum eros at velit luctus, id varius nisl cursus. Phasellus in eros massa. Cras aliquam rhoncus hendrerit. Ut eget metus laoreet, condimentum lectus a, efficitur risus. In congue neque eleifend porta sodales. Duis dignissim pharetra semper. Phasellus semper nisi nulla, in elementum nulla facilisis eget. Morbi eu libero ac libero fermentum accumsan. Nulla nec consequat urna, iaculis dignissim metus. Duis ullamcorper condimentum est eget tempor. Nam faucibus sapien augue, vel imperdiet dolor congue a.
+            Please feel free to leave feedback, let us know if there is anything wrong with out website, areas we can improve on and anything you love.
+        <br><br>
+            All feedback welcome!
+        <br><br>
+            You can also get in touch with us through social media
+         <br><br>
+            For any administration issues you maybe having - please use the contact form and we'll get back to you within 3 to 5 business days maximum
         </p>
     </div>
-    <div class="insta">
-        INSERT STUFF HERE
+    <div class="contsection">
+        <a id="contform" class="scroll">
+            <form class="contactform" action="mailto:seeya@gandecha.net" method="post" enctype="text/plain">
+                <label>First Name:</label>
+                <input type="text" name="firstname" placeholder="First Name" required>
+                <br>
+                <label>Last Name:</label>
+                <input type="text" name="lastname" placeholder="Last Name" required>
+                <br>
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="your@email.com" required>
+                <br>
+                <label>Subject:</label>
+                <input type="text" name="subject" placeholder="Feedback" required>
+                <br>
+                <label>Email Contents:</label>
+                <textarea placeholder="Your Feedback" required></textarea>
+                <br>
+                <input type="submit" value="Send Feedback">
+            </form>
+        </a>
     </div>
 </main>
 
