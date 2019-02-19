@@ -1,14 +1,8 @@
 package main
 
 import (
-	"fmt"
-	"google.golang.org/appengine"
-	"google.golang.org/appengine/datastore"
 	"html/template"
-	"httprouter"
-	"io/ioutil"
 	"log"
-	stdlog "log"
 	"net/http"
 )
 
@@ -25,11 +19,6 @@ func init() {
 
 }
 
-type User struct {
-	Email    string
-	UserName string
-	Password string
-}
 
 func main() {
 	http.HandleFunc("/", idx)
@@ -54,11 +43,6 @@ func main() {
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("./css"))))
 
 	http.ListenAndServe(":8080", nil)
-
-	r := httprouter.New()
-	http.Handle("/", r)
-	r.POST("/api/checkusername", checkUserName)
-	r.POST("/api/createuser", createUser)
 
 }
 
@@ -302,33 +286,4 @@ func signup(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-func checkUserName(res http.ResponseWriter, req *http.Request, _ httprouter.Params) {
-	ctx := appengine.NewContext(req)
-	bs, err := ioutil.ReadAll(req.Body)
-	sbs := string(bs)
-	stdlog.Println("REQUEST BODY: ", sbs)
-	q, err := datastore.NewQuery("Users").Filter("UserName=", sbs).Count(ctx)
-	stdlog.Println("ERR: ", err)
-	stdlog.Println("QUANTITY: ", q)
-	if err != nil {
-		fmt.Fprint(res, "false")
-		return
-	}
-	if q >= 1 {
-		fmt.Fprint(res, "true")
-	} else {
-		fmt.Fprint(res, "false")
-	}
-}
 
-func createUser(res http.ResponseWriter, req *http.Request, _ httprouter.Params) {
-	ctx := appengine.NewContext(req)
-	NewUser := User{
-		Email:    req.FormValue("Email"),
-		UserName: req.FormValue("Username"),
-		Password: req.FormValue("Password"),
-	}
-	key := datastore.NewIncompleteKey(ctx, "Users", nil)
-	key, _ = datastore.Put(ctx, key, &NewUser)
-	http.Redirect(res, req, "/", 302)
-}
