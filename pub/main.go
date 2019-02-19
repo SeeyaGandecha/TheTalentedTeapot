@@ -8,6 +8,7 @@ import (
 	"httprouter"
 	"io/ioutil"
 	"log"
+	stdlog "log"
 	"net/http"
 )
 
