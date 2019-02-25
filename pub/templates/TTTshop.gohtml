@@ -8,8 +8,80 @@
         right: 15px;
         width: 120px;
     }
+    .shopmain{
+        background-color: lightgrey;
+    }
+    .shop-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 5px;
+        margin: 0;
+    }
+    .shop-container.dashboard{
+        background-color: darkred;
+        color: lightgrey;
+    }
 
+    .shop-container a:link {
+        color: lightgrey;
+    }
+
+    /* visited link */
+    .shop-container a:visited {
+        color: lightgrey;
+    }
+
+    /* mouse over link */
+    .shop-container a:hover {
+        color: lightgrey;
+    }
+
+    /* selected link */
+    .shop-container a:active {
+        color: lightgrey;
+    }
+    .shop-item {
+        border: 0;
+        padding: 5px;
+        text-align: center;
+    }
+    .checkoutbtn{
+        padding: 2% 5%;
+        background-color: #c30000;
+        border: 1px solid dimgray;
+        border-radius: 15%;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(33, 35, 37, 0.67);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+=    }
+
+    .price {
+        color: darkblue;
+        font-size: 22px;
+    }
+
+    .card button {
+        border: none;
+        outline: 0;
+        padding: 15px;
+        color: #dfe1e2;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .card button:hover {
+        opacity: 0.7;
+    }
 </style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <img class="logo" src="../img/logo.png" alt="logo">
 <h1>Shop</h1>
@@ -17,4 +89,96 @@
 {{template "nav-main"}}
 {{template "TTT-nav"}}
 
+<body>
+<main class="shopmain">
+
+<div class="shop-container dashboard">
+    <div class="shop-item">
+        <div class="snipcart-summary">
+            <button  class="snipcart-user-email snipcart-user-profile checkoutbtn">
+                Customer dashboard
+            </button>
+        </div>
+    </div>
+    <div class="shop-item">
+        <div class="snipcart-summary"><button class="checkoutbtn">
+            Number of items: <span class="snipcart-total-items"></span>
+            Total price: <span class="snipcart-total-price"></span>
+            </button></div>
+    </div>
+    <div class="shop-item">
+        <button class="snipcart-checkout checkoutbtn"> Click here to checkout</button>
+    </div>
+</div>
+
+
+<div class="shop-container">
+    <div class="shop-item"><div class="card">
+            <img src="../img/shop/CANVAS.png" alt="canvas" style="width:100%">
+            <h3>Custom Canvas Print</h3>
+            <p class="price">£15.00</p>
+            <p>Custom printed canvas with the image of your choosing from our site - you may also use posts from our official social media - please obtain the link of the image for checkout </p>
+            <button
+                    class="snipcart-add-item"
+                    data-item-id="1"
+                    data-item-name="Canvas"
+                    data-item-price="15.00"
+                    data-item-url="/"
+                    data-item-description="A custom printed canvas"
+                    data-item-custom1-name="Image link"
+                    data-item-custom1-required="true"
+                    data-item-custom2-name="Size"
+                    data-item-custom2-options="Small|Medium[+5.00]|Large[+10.00]"
+                    data-item-custom2-value="Medium">
+                <p>BUY</p>
+            </button>
+        </div></div>
+    <div class="shop-item">
+        <div class="card">
+            <img src="../img/shop/whitemug.jpg" alt="mug" style="width:100%">
+            <h3>Custom Mug Print</h3>
+            <p class="price">£10.00</p>
+            <p>Custom printed white mug(10oz) with the image of your choosing from our site - you may also use posts from our official social media - please obtain the link of the image for checkout </p>
+            <button
+                    class="snipcart-add-item"
+                    data-item-id="1"
+                    data-item-name="Mug"
+                    data-item-price="10.00"
+                    data-item-url="/"
+                    data-item-description="A custom printed mug"
+                    data-item-custom1-name="Image link"
+                    data-item-custom1-required="true">
+                <p>BUY</p>
+            </button>
+        </div></div>
+    <div class="shop-item"><div class="card">
+            <img src="../img/shop/download.jpg" alt="download symbol" style="width:100%">
+            <h3>High Quality Images</h3>
+            <p class="price">£2.50</p>
+            <p>High quality images ready to download for desktop, phone, tablet backgrounds - please obtain the link of the image for checkout </p>
+            <button
+                    class="snipcart-add-item"
+                    data-item-id="1"
+                    data-item-name="Download Image"
+                    data-item-price="2.50"
+                    data-item-url="/"
+                    data-item-description="A custom printed canvas"
+                    data-item-custom1-name="Image link"
+                    data-item-custom1-required="true"
+                    data-item-custom2-name="Recipient Email"
+                    data-item-custom2-required="true">
+                <p>BUY</p>
+            </button>
+        </div></div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="YTQxNWUxMTEtMTA0Ny00MzdhLThmM2MtMzAzYTBhMjBiNGNhNjM2ODY0NTY1MDU1MDUwMDg5"></script>
+
+<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+
+</main>
+</body>
 {{template "footer"}}
