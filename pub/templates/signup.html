@@ -1,50 +1,155 @@
 {{define "signup"}}
 {{template "header" .}}
-<h1 class="alert alert-info">Sign Up</h1>
-<div class="container">
-    <form  method="POST" action="/signup">
-        <label class="form-control-label" for="userName">User Name</label>
-        {{with .Errors.username}}
-        <div class="alert alert-danger">
-            {{.}}
+    <style>
+        .signupmain{
+            background-color: #333;
+            height: 80%;
+        }
+
+        .signup-grid {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            background-color: #333;
+            padding: 5% 2%;
+        }
+        .grid-item {
+            background-color: ghostwhite;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        input[type=text], input[type=email], input[type=submit], input[type=password], textarea {
+            text-align: center;
+            width: 50%;
+            padding: 20px;
+            border: 2px solid slategrey;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px grey;
+            box-sizing: border-box;
+            margin: 1% 5%;}
+
+        label{
+            padding: 1% 20%;
+            border-radius: 20px;
+            background-color: #e6e6e6;
+            box-shadow: 0 0 20px grey;
+        }
+
+        textarea{
+            height: 150px;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            padding: 1%;
+            width: 20%;
+            border: solid 2px black;
+            border-radius: 10px;
+            cursor: pointer;}
+
+        button:hover {
+            background: black;}
+
+
+        .alert-danger{
+            color: ghostwhite;
+            background-color: red;
+            padding: 1%;
+            border-radius: 50px;
+            border: solid 2px black;
+            box-shadow: 0 0 20px black;
+        }
+    </style>
+
+
+<main class="signupmain">
+
+    <div class="signup-grid">
+
+        <div class="grid-item">
+            <h1 class="alert alert-info">Sign Up</h1>
         </div>
-        {{end}}
-        <input class="form-control" type="text" id="userName" name="userName">
-        <label class="form-control-label" for="fName">First Name</label>
-        {{with .Errors.fname}}
-        <div class="alert alert-danger">
-            {{.}}
+
+        <div class="grid-item">
+            <p>Signing up to The Talented Teapot allows ours users to showcase their work on our site</p>
+            <p>We also do give-aways to users and send out promo-codes that work in our shop so keep an eye out on your emails!</p>
+            <p>We promise NEVER to spam you or send you anything unnecessary but if you have any issues we'll be happy to assist you any way we can! </p>
+            <p>If you have any questions or feedback don't hesitate to contact us <a href="/contact">here</a></p>
         </div>
-        {{end}}
-        <input class="form-control" type="text" id="fName" name="fName">
-        <label class="form-control-label" for="lName">Last Name</label>
-        {{with .Errors.lname}}
-        <div class="alert alert-danger">
-            {{.}}
+
+        <div class="grid-item">
+            <form  method="POST" action="/signup">
+
+                <label class="form-control-label" for="userName">User Name</label>
+                <br>
+                <input class="form-control" type="text" id="userName" name="userName">
+                {{with .Errors.username}}
+                    <div class="alert alert-danger">
+                        {{.}}
+                    </div>
+                {{end}}
+                <br><br>
+
+                <label class="form-control-label" for="fName">First Name</label>
+                <br>
+                <input class="form-control" type="text" id="fName" name="fName">
+                {{with .Errors.fname}}
+                    <div class="alert alert-danger">
+                        {{.}}
+                    </div>
+                {{end}}
+                <br><br>
+
+                <label class="form-control-label" for="lName">Last Name</label>
+                <br>
+                <input class="form-control" type="text" id="lName" name="lName">
+                {{with .Errors.lname}}
+                    <div class="alert alert-danger">
+                        {{.}}
+                    </div>
+                {{end}}
+                <br><br>
+
+                <label class="form-control-label" for="email">Email</label>
+                <br>
+                <input class="form-control" type="email" id="email" name="email">
+                {{with .Errors.email}}
+                    <div class="alert alert-danger">
+                        {{.}}
+                    </div>
+                {{end}}
+                <br><br>
+                <label class="form-control-label" for="password">Password</label>
+                <br>
+                <input class="form-control" type="password" id="password" name="password">
+                {{with .Errors.password}}
+                    <div class="alert alert-danger">
+                        {{.}}
+                    </div>
+                {{end}}
+                <br><br>
+
+                <label class="form-control-label" for="cpassword">Confirm Password</label>
+                <br>
+                <input class="form-control" type="password" id="cpassword" name="cpassword">
+                <br><br>
+                <button class="btn btn-primary" type="submit">Create Account</button>
+            </form>
         </div>
-        {{end}}
-        <input class="form-control" type="text" id="lName" name="lName">
-        <label class="form-control-label" for="email">Email</label>
-        {{with .Errors.email}}
-        <div class="alert alert-danger">
-            {{.}}
+
+        <div class="grid-item">
+            <div class="alert alert-info">
+                <a href="/account" class="alert"><button>Sign In!</button></a>
+            </div>
         </div>
-        {{end}}
-        <input class="form-control" type="email" id="email" name="email">
-        <label class="form-control-label" for="password">Password</label>
-        {{with .Errors.password}}
-        <div class="alert alert-danger">
-            {{.}}
-        </div>
-        {{end}}
-        <input class="form-control" type="password" id="password" name="password">
-        <label class="form-control-label" for="cpassword">Confirm Password</label>
-        <input class="form-control" type="password" id="cpassword" name="cpassword">
-        <button class="btn btn-primary" type="submit">Submit</button>
-    </form>
-</div>
-<div class="alert alert-info">
-    <a href="/" class="alert">Sign In!</a>
-</div>
+
+    </div>
+
+</main>
+
+
 {{template "footer" .}}
 {{end}}
