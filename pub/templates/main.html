@@ -1,22 +1,113 @@
 {{define "signin"}}
 {{template "header" .}}
-<h1 class="alert alert-info">Login</h1>
-<div class="container">
-    {{with .Errors.message}}
-    <div class="alert alert-danger">
-        {{.}}
+
+<style>
+    .signinmain{
+        background-color: #333;
+        height: 80%;
+    }
+
+    .signin-grid {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        background-color: #333;
+        padding: 5% 2%;
+    }
+    .grid-item {
+        background-color: ghostwhite;
+        border: 1px solid black;
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    input[type=text], input[type=email], input[type=submit], input[type=password], textarea {
+        text-align: center;
+        width: 50%;
+        padding: 20px;
+        border: 2px solid slategrey;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px grey;
+        box-sizing: border-box;
+        margin: 1% 5%;}
+
+    label{
+        padding: 1% 20%;
+        border-radius: 20px;
+        background-color: #e6e6e6;
+        box-shadow: 0 0 20px grey;
+    }
+
+    textarea{
+        height: 150px;
+    }
+
+    button {
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        padding: 1%;
+        width: 20%;
+        border: solid 2px black;
+        border-radius: 10px;
+        cursor: pointer;}
+
+    button:hover {
+        background: black;}
+
+    .alert-danger{
+        color: ghostwhite;
+        background-color: red;
+        padding: 1%;
+        border-radius: 50px;
+        border: solid 2px black;
+        box-shadow: 0 0 20px black;
+
+    }
+
+
+</style>
+<main class="signinmain">
+
+
+    <div class="signin-grid">
+        <div class="grid-item">
+            <h1 class="alert alert-info">Login</h1>
+            <h4>To upload images to the public gallery, please sign in</h4>
+        </div>
+
+        <div class="grid-item">
+
+            <br>
+            <form method="POST" action="/login">
+                <label class="form-control" for="uname">Username:</label>
+                <br>
+                <input class="form-control" type="text" id="uname" name="uname">
+                <br><br>
+                <label class="form-control" for="password">Password:</label>
+                <br>
+                <input class="form-control" type="password" id="password" name="password">
+                <br><br>
+                {{with .Errors.message}}
+                    <div class="alert alert-danger">
+                        {{.}}
+                    </div>
+                {{end}}
+                <br>
+                <button class="btn btn-info" type="submit">Sign In</button>
+            </form>
+
+        </div>
+
+        <div class="grid-item">
+            <div class="alert alert-info" role="alert">
+                    <a class="alert-link" href="/signup"><button>Sign Up</button></a>
+            </div>
+        </div>
     </div>
-    {{end}}
-    <form method="POST" action="/login">
-        <label class="form-control" for="uname">User Name</label>
-        <input class="form-control" type="text" id="uname" name="uname">
-        <label class="form-control" for="password">Password</label>
-        <input class="form-control" type="password" id="password" name="password">
-        <button class="btn btn-info" type="submit">Submit</button>
-    </form>
-</div>
-<div class="alert alert-info" role="alert">
-    <a class="alert-link" href="/signup">Sign Up</a>
-</div>
+
+
+</main>
+
 {{template "footer" .}}
 {{end}}

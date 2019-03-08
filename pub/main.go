@@ -52,7 +52,7 @@ func main() {
 	http.HandleFunc("/account", accountpage)
 	http.HandleFunc("/login", login)
 	http.HandleFunc("/logout", logout)
-	http.HandleFunc("/example", examplePage)
+	http.HandleFunc("/welcomeuser", userPage)
 	http.HandleFunc("/signup", signup)
 	http.HandleFunc("/upload", upload)
 	http.Handle("/assets/", http.StripPrefix("/assets", http.FileServer(http.Dir("./assets"))))
@@ -285,7 +285,7 @@ var cookieHandler = securecookie.New(
 func accountpage(w http.ResponseWriter, r *http.Request) {
 	uuid := getUuid(r)
 	if uuid != "" {
-		http.Redirect(w, r, "/example", 302)
+		http.Redirect(w, r, "/welcomeuser", 302)
 		return
 	}
 	msg := getMsg(w, r, "message")
@@ -309,7 +309,7 @@ func login(w http.ResponseWriter, r *http.Request) {
 	if name != "" && pass != "" {
 		if b, uuid := userExists(u); b == true {
 			setSession(&User{Uuid: uuid}, w)
-			redirect = "/example"
+			redirect = "/welcomeuser"
 		} else {
 			setMsg(w, "message", "please signup or enter a valid username and password!")
 		}
@@ -324,7 +324,7 @@ func logout(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/account", 302)
 }
 
-func examplePage(w http.ResponseWriter, r *http.Request) {
+func userPage(w http.ResponseWriter, r *http.Request) {
 	uuid := getUuid(r)
 	u := getUserFromUuid(uuid)
 	if uuid != "" {
@@ -416,7 +416,6 @@ func upload(w http.ResponseWriter, r *http.Request) {
 		setMsg(w, "message", "Please login first!")
 		http.Redirect(w, r, "/account", 302)
 	}
-
 	fmt.Println("Method", r.Method)
 
 	fn := ""
