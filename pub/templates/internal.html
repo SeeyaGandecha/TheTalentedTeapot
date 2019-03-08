@@ -1,20 +1,78 @@
 {{define "internal"}}
 {{template "header" .}}
-<div class="alert alert-info" role="alert">
-    <h1 class="alert">Welcome!</h1>
-    <hr>
+    <style>
+        .accountIN{
+            background-color: #333;
+            height: 80%;
+        }
 
-    <strong>Hello User: {{.Username}}</strong>
-</div>
-<div class="jumbotron">
-    <div class="container">
-        what would you like to do today {{.Fname}} {{.Lname}}?
-        <br>
-        Go to the <a href="/upload">Upload</a> Page
+        .accountIN-grid {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            background-color: #333;
+            padding: 5% 2%;
+        }
+        .grid-item {
+            background-color: ghostwhite;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        button {
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+            width: 20%;
+            border: solid 2px black;
+            border-radius: 10px;
+            cursor: pointer;}
+
+        button:hover {
+            background: black;}
+
+        .options{
+            padding: 1% 20%;
+            border-radius: 20px;
+            background-color: #efefef;
+            box-shadow: 0 0 20px grey;
+        }
+    </style>
+
+<main class="accountIN">
+
+    <div class="accountIN-grid">
+
+        <div class="grid-item alert alert-info" role="alert">
+                <h1 class="alert">Welcome!</h1>
+                <hr><br>
+            <p class="options">You Are Signed In As:<br><br><strong>{{.Username}}</strong></p>
+                <br>
+        </div>
+
+        <div class="grid-item">
+            <p class="options">Here are the options we've got for you today {{.Fname}} {{.Lname}}:</p>
+            <br>
+            <p class="options">If you want to upload images to the public gallery:</p>
+            <a href="/upload"><button>Upload</button></a>
+            <br><br>
+            <p class="options">View public gallery:</p>
+            <a href="/gallery" target="_blank"><button>Gallery</button></a>
+            <br>
+
+        </div>
+
+        <div class="grid-item">
+            <br>
+            <form action="/logout" method="post">
+                <button class="btn btn-warning" type="submit">Logout</button>
+            </form>
+        </div>
     </div>
-</div>
-<form action="/logout" method="post">
-    <button class="btn btn-warning" type="submit">Logout</button>
-</form>
+
+</main>
+
+
 {{template "footer" .}}
 {{end}}
