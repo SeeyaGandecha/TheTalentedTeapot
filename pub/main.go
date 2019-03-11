@@ -411,15 +411,16 @@ func upload(w http.ResponseWriter, r *http.Request) {
 	uuid := getUuid(r)
 	u := getUserFromUuid(uuid)
 	if uuid != "" {
-		render(w, "internal", u)
+		render(w, "/upload", u)
 	} else {
 		setMsg(w, "message", "Please login first!")
-		http.Redirect(w, r, "/account", 302)
+		http.Redirect(w, r, "/upload", 302)
 	}
 	fmt.Println("Method", r.Method)
 
-	fn := ""
 
+
+	fn := ""
 	if r.Method == http.MethodPost {
 		// open
 		f, h, err := r.FormFile("q")

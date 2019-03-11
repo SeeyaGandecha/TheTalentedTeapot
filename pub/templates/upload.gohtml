@@ -5,22 +5,128 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Upload</title>
+    <img class="logo" src="../img/logo.png" alt="logo">
+
 </head>
+
+<style>
+    .logo{
+
+        position: absolute;
+        top: 7px;
+        right: 15px;
+        width: 120px;
+    }
+
+    h1{
+        color: red;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 80px auto 0 auto;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111;
+    }
+    .uploadmain{
+        background-color: #333;
+        height: 80%;
+    }
+    .upload-grid {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        background-color: #333;
+        padding: 5% 2%;
+    }
+    .grid-item {
+        background-color: ghostwhite;
+        border: 1px solid black;
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+    input {
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        padding: 1%;
+        width: 20%;
+        border: solid 2px black;
+        border-radius: 10px;
+        cursor: pointer;}
+
+    input:hover {
+        background: black;}
+
+
+</style>
 <body>
 
-<form method="POST" enctype="multipart/form-data">
-    <input type="file" name="q">
-    <input type="submit">
-</form>
-<br>
+<nav>
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/ttt">TheTalentedTeapot</a></li>
+        <li><a href="/gallery">User Gallery</a></li>
+        <li><a href="/forum">Forum</a></li>
+        <li><a href="/maps">Maps</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/account">Account</a></li>
 
-{{if .}}
-    Your post has been uploaded, please wait for it to be released on the site!
-        This may take 3-5 working days.
-    file name: {{.}}
-    <img src="/assets/{{.}}">
-{{end}}
+    </ul>
+</nav>
+<main class="uploadmain">
+
+    <div class="upload-grid">
+        <div class="grid-item">
+            <form method="POST" enctype="multipart/form-data">
+                    <input type="file" name="q">
+
+
+               <input type="submit">
+            </form>
+            <br>
+            If you have trouble uploading files, please try and rename the file before uploading
+            <br>
+            If yoU are still having issues uploading please contact us <a href="/contact">here</a>
+        </div>
+
+        <div class="grid-item">
+
+            {{if .}}
+                Your post has been uploaded, please wait for it to be released on the site!
+                This may take 3-5 working days.
+                file name: {{.}}
+        </div>
+        <div class="grid-item">
+            <img class="uploadeddisplay" src="/assets/{{.}}" style="
+                    width: 100%;">
+            {{end}}
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
 
 </body>
 </html>
