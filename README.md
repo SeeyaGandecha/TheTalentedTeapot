@@ -2,6 +2,9 @@
 
 Notes to write up later:
 
+
+- Instagram widget from: https://instawidget.net but then changed it and created a new one from: https://www.grahamsnaps.com 
+
 used to create navigation:
 (url)
 

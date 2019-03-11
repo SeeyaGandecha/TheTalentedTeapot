@@ -9,8 +9,35 @@
         width: 120px;
     }
 
+    .contactmain{
+        background-color: #333;
+    }
+
+    .contact-container {
+        display: grid;
+        grid-template-columns: 20% auto 10%;
+        background-color: #333;
+        padding: 2%;
+    }
+    .contact-item {
+        background-color: ghostwhite;
+        border: 1px solid black;
+        padding: 0;
+        text-align: center;
+    }
+
+    .itemfirst {
+        grid-row: 1 / 4;
+        padding: 20px 5px 0 5px;
+    }
+
+    .itemlast{
+        grid-column: 1 / 4;
+        /*padding: 20px 5px 0 5px;*/
+    }
+
     .bannercontact{
-        width: 100%
+        width: 100%;
     }
 
     .contacticons {
@@ -27,17 +54,6 @@
         height: 100px;
     }
 
-    .contscroll{
-        display: grid;
-        grid-template-rows: auto;
-        padding: 20px;
-    }
-    .contsection{
-        width: 100%;
-        border: 1px solid lightgrey;
-        text-align: center;
-    }
-
     .contactform{
         grid-area: cform;
         border-radius: 50px;
@@ -48,7 +64,7 @@
     input[type=text], input[type=email], input[type=submit], textarea {
         text-align: center;
         width: 90%;
-        padding: 20px;
+        padding: 10px;
         border: 2px solid slategrey;
         border-radius: 10px;
         box-sizing: border-box;
@@ -58,7 +74,7 @@
         padding-left: 0%;}
 
     textarea{
-        height: 150px;
+        height: 100px;
     }
 
     input[type=submit] {
@@ -72,20 +88,26 @@
     input[type=submit]:hover {
         background: black;}
 
-
-    .socialmediaicons {
-        display: inline-flex;
-        text-align: center;
+    .smicongrid {
+        display: grid;
         grid-template-columns: auto auto auto;
+        background-color: ghostwhite;
+        padding: 0;
     }
     .smicon {
-        width: 100%;
-        position: relative;
         border: 1px solid red;
-        padding: 40px;
         text-align: center;
     }
 
+    /*.socialmediaicons {*/
+        /*display: inline-flex;*/
+        /*text-align: center;*/
+        /*grid-template-columns: auto auto auto;*/
+    /*}*/
+    .icon {
+        width: 100%;
+        position: relative;
+    }
 
     .overlay {
         position: absolute;
@@ -99,10 +121,10 @@
         transition: opacity .5s linear;
     }
 
-    .smicon:hover .overlay {
+    .icon:hover .overlay {
         opacity: 1;
     }
-    .smicon:hover .smimage {
+    .icon:hover .smimage {
         transition: opacity .5s linear;
         opacity: 0;
     }
@@ -116,6 +138,7 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
+
     .information{
         font-size: 40px;
         width: 100%;
@@ -125,7 +148,7 @@
     }
     .or{
         color: ghostwhite;
-        background: gray;
+        background: #333;
     }
     .information p{
         text-align: right;
@@ -144,84 +167,101 @@
 
     :target {display:block;}
 
+    .borderdisplay{
+        border-bottom: none;
+        border-top: none ;
+    }
+
 </style>
 
 <img class="logo" src="../img/logo.png" alt="logo">
 <h1>Contact</h1>
 
 {{template "nav-main"}}
-
 <body>
+<main class="contactmain">
 
-    <img class="bannercontact" src="../img/contactpg/contactbanner.jpg" alt="banner">
+    <div class="contact-container">
 
-    <div class="contacticons">
-        <a href="#contform"><div class="icon"><img class="imgicon" src="../img/contactpg/mail.png" alt="email"></div></a>
-        <a href="#socialmedias"><div class="icon"><img class="imgicon" src="../img/contactpg/link.png" alt="social media"></div></a>
-        <a href="#info"><div class="icon"><img class="imgicon" src="../img/contactpg/telephone.png" alt="phone"></div></a>
-    </div>
-
-    <div class="contscroll">
-
-        <div class="contsection">
-            <a id="contform" class="scroll">
-                <form class="contactform" action="mailto:seeya@gandecha.net" method="post" enctype="text/plain">
-                <label>First Name:</label>
-                  <input type="text" name="firstname" placeholder="First Name" required>
-                  <br>
-                  <label>Last Name:</label>
-                  <input type="text" name="lastname" placeholder="Last Name" required>
-                  <br>
-                  <label>Email:</label>
-                  <input type="email" name="email" placeholder="your@email.com" required>
-                  <br>
-                  <label>Subject:</label>
-                  <input type="text" name="subject" placeholder="e.g. 'Booking'" required>
-                  <br>
-                  <label>Email Contents:</label>
-                  <textarea placeholder="Description" required></textarea>
-                  <br>
-                  <input type="submit" value="Send Email">
-               </form>
-        </a>
+        <div class="contact-item itemfirst">
+            <img class="bannercontact" src="../img/contactpg/cntbanner.jpg" alt="banner">
         </div>
 
-
-
-        <div class="contsection socialmediaicons">
-            <a id="socialmedias" class="scroll">
-                <div class="smicon"><a href="https://www.facebook.com/TheTalentedTeapot/" target="_blank">
-                    <img src="../img/contactpg/facebookblue.png" alt="facebook" class="smimage">
-                    <div class="overlay">
-                        <div class="swapimg">
-                            <img src="../img/contactpg/facebookred.png" alt="facebook">
-                        </div>
-                    </div></a>
-                </div>
-
-                <div class="smicon"><a href="http://instagram.com/the_talented_teapot/" target="_blank">
-                    <img src="../img/contactpg/instagramblue.png" alt="instagram" class="smimage">
-                    <div class="overlay">
-                        <div class="swapimg">
-                            <img src="../img/contactpg/instagramred.png" alt="intagram">
-                        </div>
-                    </div></a>
-                </div>
-
-                <div class="smicon"><a href="http://linkedin.com/company/the_talented_teapot/" target="_blank">
-                        <img src="../img/contactpg/linkedinblue.png" alt="linkedin" class="smimage">
-                        <div class="overlay">
-                            <div class="swapimg">
-                                <img src="../img/contactpg/linkedinred.png" alt="linkedin">
-                            </div>
-                        </div></a>
-                </div>
-            </a>
+        <div class="contact-item">
+            <div class="contacticons">
+                <a href="#contform"><div class="icon"><img class="imgicon" src="../img/contactpg/mail.png" alt="email"></div>CONTACT FORM</a>
+                <a href="#socialmedias"><div class="icon"><img class="imgicon" src="../img/contactpg/link.png" alt="social media"></div>SOCIAL MEDIA</a>
+                <a href="#info"><div class="icon"><img class="imgicon" src="../img/contactpg/telephone.png" alt="phone"></div>INFORMATION</a>
+            </div>
         </div>
 
+        <div class="contact-item borderdisplay"></div>
 
+        <div class="contact-item">
+                    <a id="contform" class="scroll">
+                        <form class="contactform" action="mailto:seeya@gandecha.net" method="post" enctype="text/plain">
+                            <label>First Name:</label>
+                            <input type="text" name="firstname" placeholder="First Name" required>
+                            <br>
+                            <label>Last Name:</label>
+                            <input type="text" name="lastname" placeholder="Last Name" required>
+                            <br>
+                            <label>Email:</label>
+                            <input type="email" name="email" placeholder="your@email.com" required>
+                            <br>
+                            <label>Subject:</label>
+                            <input type="text" name="subject" placeholder="e.g. 'Booking'" required>
+                            <br>
+                            <label>Email Contents:</label>
+                            <textarea placeholder="Description" required></textarea>
+                            <br>
+                            <input type="submit" value="Send Email">
+                        </form>
+                    </a>
+        </div>
 
-        <div class="contsection">
+        <div class="contact-item borderdisplay"></div>
+
+        <div class="contact-item">
+            <a id="socialmedias" class="scroll"></a>
+                <div class="smicongrid">
+                    <div class="smicon">
+                        <div class="icon">
+                            <a href="https://www.facebook.com/TheTalentedTeapot/" target="_blank">
+                                <img src="../img/contactpg/facebookblue.png" alt="facebook" class="smimage">
+                                <div class="overlay">
+                                    <div class="swapimg">
+                                        <img src="../img/contactpg/facebookred.png" alt="facebook">
+                                    </div>
+                                </div></a>
+                        </div>
+                    </div>
+                    <div class="smicon">
+                        <div class="icon"><a href="http://instagram.com/the_talented_teapot/" target="_blank">
+                                <img src="../img/contactpg/instagramblue.png" alt="instagram" class="smimage">
+                                <div class="overlay">
+                                    <div class="swapimg">
+                                        <img src="../img/contactpg/instagramred.png" alt="intagram">
+                                    </div>
+                                </div></a>
+                        </div>
+                    </div>
+                    <div class="smicon">
+                        <div class="icon"><a href="https://www.linkedin.com/company/thetalentedteapot/" target="_blank">
+                                <img src="../img/contactpg/linkedinblue.png" alt="linkedin" class="smimage">
+                                <div class="overlay">
+                                    <div class="swapimg">
+                                        <img src="../img/contactpg/linkedinred.png" alt="linkedin">
+                                    </div>
+                                </div></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="contact-item borderdisplay"></div>
+
+        <div class="contsection contact-item itemlast">
             <a id="info" class="scroll">
                 <table class="information">
                     <tr>
@@ -237,11 +277,13 @@
                         <td></td>
                         <td><p class="link"><a href="tel:+447910453483">07910453483</a></p></td>
                     </tr>
-
                 </table>
             </a>
         </div>
     </div>
+</main>
+</body>
+
+
 
 {{template "footer"}}
-</body>
