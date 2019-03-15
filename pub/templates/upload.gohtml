@@ -1,82 +1,83 @@
 <!doctype html>
 <html lang="en">
-<head>
+<head><style>
+        .logo{
+
+            position: absolute;
+            top: 7px;
+            right: 15px;
+            width: 120px;
+        }
+
+        h1{
+            color: red;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 80px auto 0 auto;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+        .uploadmain{
+            background-color: #333;
+            height: 80%;
+        }
+        .upload-grid {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            background-color: #333;
+            padding: 5% 2%;
+        }
+        .grid-item {
+            background-color: ghostwhite;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        input {
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            padding: 1%;
+            width: 20%;
+            border: solid 2px black;
+            border-radius: 10px;
+            cursor: pointer;}
+
+        input:hover {
+            background: black;}
+
+
+    </style>
+
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Upload</title>
-    <img class="logo" src="../img/logo.png" alt="logo">
+    <a href="home"><img class="logo" src="../img/logo.png" alt="logo"></a>
 
 </head>
 
-<style>
-    .logo{
 
-        position: absolute;
-        top: 7px;
-        right: 15px;
-        width: 120px;
-    }
-
-    h1{
-        color: red;
-    }
-
-    ul {
-        list-style-type: none;
-        margin: 80px auto 0 auto;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333;
-    }
-
-    li {
-        float: left;
-    }
-
-    li a {
-        display: block;
-        color: white;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    li a:hover {
-        background-color: #111;
-    }
-    .uploadmain{
-        background-color: #333;
-        height: 80%;
-    }
-    .upload-grid {
-        display: grid;
-        grid-template-rows: auto auto auto;
-        background-color: #333;
-        padding: 5% 2%;
-    }
-    .grid-item {
-        background-color: ghostwhite;
-        border: 1px solid black;
-        padding: 20px;
-        font-size: 20px;
-        text-align: center;
-    }
-    input {
-        background-color: red;
-        color: white;
-        font-size: 20px;
-        padding: 1%;
-        width: 20%;
-        border: solid 2px black;
-        border-radius: 10px;
-        cursor: pointer;}
-
-    input:hover {
-        background: black;}
-
-
-</style>
 <body>
 
 <nav>
