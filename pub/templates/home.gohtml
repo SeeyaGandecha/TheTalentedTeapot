@@ -9,13 +9,233 @@
         right: 15px;
         width: 120px;
     }
+    .mainhome{
+        background-color: #333;
+    }
+    .homecontainer{
+        padding: 2%;
+        text-align: center;
+        display: grid;
+        grid-template-columns: auto%;
+        background-color: #333;
+    }
+    .maingrid{
+        background-color: ghostwhite;
+        border: 1px solid #333;
+        text-align: center;
+    }
 
+    .innercontainer {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        background-color: grey;
+        padding: 1%;
+    }
+    .ingriditem {
+        background-color: ghostwhite;
+        border: 5px solid grey;
+        text-align: center;
+        padding: 2px;
+    }
+    .top{
+        grid-column: 1/3
+    }
+    .bottom{
+        grid-column: 1/5
+    }
+    button {
+        min-width: 150px;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+        margin: 1%;
+        border: solid 2px black;
+        border-radius: 10px;
+        cursor: pointer;}
+
+    button:hover {
+        background: black;}
+    .rounds {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /*margin: 30px auto;*/
+        text-align: center;
+        background-color: ghostwhite;
+    }
+
+    .buttonli {
+        list-style: none;
+        position: relative;
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        margin: 55px;
+        float: inherit;
+    }
+
+
+    @keyframes rotate {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(-360deg);}
+    }
+
+    .round {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        text-decoration: none;
+        text-align: center;
+        font-size: 25px;
+        text-shadow: 0 1px 0 rgba(255,255,255,.7);
+        transition: all .25s ease-in-out;
+        box-shadow: 2px 2px 7px rgba(0,0,0,.2);
+        border-radius: 300px;
+        z-index: 1;
+        border-width: 4px;
+        border-style: solid;
+    }
+
+    .round:hover {
+        width: 130%;
+        height: 130%;
+        left: -15%;
+        top: -15%;
+        font-size: 30px;
+        padding-top: 30px;
+        box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+        z-index: 2;
+        border: 10px;
+        transform: rotate(-360deg);
+    }
+
+    a.red {
+        background-color: rgba(239,57,50,1);
+        color: rgba(133,32,28,1);
+        border-color: rgba(133,32,28,.2);
+    }
+
+    a.red:hover {
+        color: rgba(239,57,50,1);
+    }
+
+    a.green {
+        background-color: rgba(1,151,171,1);
+        color: rgba(0,63,71,1);
+        border-color: rgba(0,63,71,.2);
+    }
+
+    a.green:hover {
+        color: rgba(1,151,171,1);
+    }
+
+    a.yellow {
+        background-color: rgba(252,227,1,1);
+        color: rgba(153,38,0,1);
+        border-color: rgba(153,38,0,.2);
+    }
+
+    a.yellow:hover {
+        color: rgba(252,227,1,1);
+    }
+
+    .round span.round {
+        display: block;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+        font-size: 1px;
+        border: none;
+        padding: 40% 20% 0 20%;
+        color: #fff;
+    }
+
+    .round span:hover {
+        opacity: .85;
+        font-size: 16px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.5);
+    }
+
+    .green span {
+        background: rgba(0,63,71,.7);
+    }
+
+    .red span {
+        background: rgba(133,32,28,.7);
+    }
+
+    .yellow span {
+        background: rgba(161,145,0,.7);
+
+    }
 </style>
 
-    <img class="logo" src="../img/logo.png" alt="logo">
+    <a href="home"><img class="logo" src="../img/logo.png" alt="logo"></a>
 
     <h1 class="pgtitle">Home</h1>
 
 {{template "nav-main"}}
+
+ <body>
+ <main class="mainhome">
+     <div class="homecontainer">
+         <div class="maingrid">
+             <p style="font-size: 20px; margin-bottom: 0">Welcome to</p>
+             <p style="font-size: 30px; color: red; margin-top: 0"><strong>The Talented Teapot</strong></p>
+         </div>
+         <div class="maingrid">
+             <p style="font-size: 18px">
+                 There are two sections to this website <br>
+            The first, a platform for photographers to share their work and communicate with one another<br>
+                 The second, a portfolio to display our work, services and products
+             </p>
+         </div>
+         <div class="maingrid">
+
+             <div class="innercontainer">
+                 <div class="ingriditem top">
+                     <p style="margin: 1%">Join the discussion</p>
+                     <a href="forum"><button>FORUM</button></a>
+                 </div>
+                 <div class="ingriditem">
+                     <p style="margin: 1%">Who are we?<br>Check out some of our work</p>
+                     <a href="TTTportfolio"><button>PORTFOLIO</button></a>
+                 </div>
+                 <div class="ingriditem">
+                     <p style="margin: 1%">Check out some of our upcoming events<br>Arrange a consultation</p>
+                     <a href="TTTevents"><button>EVENTS & BOOKINGS</button></a>
+                 </div>
+                 <div class="ingriditem">
+                     <p style="margin: 1%">Want to see your work? <br> Check out our public gallery!</p>
+                     <a href="gallery"><button>GALLERY</button></a>
+                 </div>
+                 <div class="ingriditem">
+                     <p style="margin: 1%">See all the beautify places we've visited<br> On our interactive map</p>
+                     <a href="maps"><button>MAPS</button></a>
+                 </div>
+                 <div class="ingriditem">
+                     <p style="margin: 1%">Looking for a photographer?<br>Find a service that suits you</p>
+                     <a href="TTTservices"><button>SERVICES</button></a>
+                 </div>
+                 <div class="ingriditem">
+                     <p style="margin: 1%">Want to see more?<br> Find us on social media</p>
+                     <a href="TTTsm"><button>SOCIAL MEDIA</button></a>
+                 </div>
+                 <div class="ingriditem bottom">
+                     <ul class="rounds">
+                         <li class="buttonli"><a href="account" class="round green">Login<span class="round">That is, if you already have an account.</span></a></li>
+                         <li class="buttonli"><a href="signup" class="round red">Sign Up<span class="round">But only if you really, really want to. </span></a></li>
+                         <li class="buttonli"><a href="TTTshop" class="round yellow">Shop<span class="round">Take a look. This product is totally rad!</span></a></li>
+                     </ul>
+                 </div>
+             </div>
+
+         </div>
+
+     </div>
+ </main>
+ </body>
 
 {{template "footer"}}

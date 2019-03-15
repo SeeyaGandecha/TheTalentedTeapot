@@ -1,49 +1,50 @@
 {{ define "header"}}
 <html>
+<style>
+    .logo{
+
+        position: absolute;
+        top: 7px;
+        right: 15px;
+        width: 120px;
+    }
+
+    h1{
+        color: red;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 80px auto 0 auto;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111;
+    }
+
+</style>
 <head>
 <meta charset="utf-8">
 <title>User Sign in</title>
 
-    <img class="logo" src="../img/logo.png" alt="logo">
+    <a href="home"><img class="logo" src="../img/logo.png" alt="logo"></a>
 
 </head>
-    <style>
-        .logo{
 
-            position: absolute;
-            top: 7px;
-            right: 15px;
-            width: 120px;
-        }
-
-        h1{
-            color: red;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 80px auto 0 auto;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: #111;
-        }
-
-    </style>
 <body>
 <nav>
     <ul>
