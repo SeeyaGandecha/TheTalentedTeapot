@@ -283,6 +283,7 @@ var cookieHandler = securecookie.New(
 	securecookie.GenerateRandomKey(32))
 
 func accountpage(w http.ResponseWriter, r *http.Request) {
+
 	uuid := getUuid(r)
 	if uuid != "" {
 		http.Redirect(w, r, "/welcomeuser", 302)
