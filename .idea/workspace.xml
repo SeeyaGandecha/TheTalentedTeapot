@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5ecf39b-9b1a-4839-bcf2-04187b49fd1a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pub/img/gridgall/DSC05378.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/img/gridgall/DSC06304.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/pub/img/gridgall/DSC06304.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/img/gridgall/DSC06411.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/img/gridgall/IMG_4781.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pub/templates/TTTservices.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/pub/templates/TTTservices.gohtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,14 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pub/templates/TTTservices.gohtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1461">
-              <caret line="136" column="70" selection-start-line="136" selection-start-column="70" selection-end-line="136" selection-end-column="70" />
-              <folding>
-                <element signature="e#2603#2640#0#HTML" expanded="true" />
-                <element signature="e#2717#2754#0#HTML" expanded="true" />
-                <element signature="e#3820#3860#0#HTML" expanded="true" />
-                <element signature="e#3937#3974#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="216" column="50" selection-start-line="216" selection-start-column="50" selection-end-line="216" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -275,8 +273,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21405493" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21405493" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32876712" />
@@ -289,7 +288,7 @@
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32876712" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32876712" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49596122" visible="true" weight="0.21643835" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49596122" visible="true" weight="0.21643835" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50403875" side_tool="true" weight="0.21643835" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -612,14 +611,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pub/templates/TTTservices.gohtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1461">
-          <caret line="136" column="70" selection-start-line="136" selection-start-column="70" selection-end-line="136" selection-end-column="70" />
-          <folding>
-            <element signature="e#2603#2640#0#HTML" expanded="true" />
-            <element signature="e#2717#2754#0#HTML" expanded="true" />
-            <element signature="e#3820#3860#0#HTML" expanded="true" />
-            <element signature="e#3937#3974#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="216" column="50" selection-start-line="216" selection-start-column="50" selection-end-line="216" selection-end-column="50" />
         </state>
       </provider>
     </entry>
