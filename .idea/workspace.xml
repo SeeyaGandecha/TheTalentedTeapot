@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5ecf39b-9b1a-4839-bcf2-04187b49fd1a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pub/templates/TTTshop.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/pub/templates/TTTshop.gohtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pub/templates/home.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/pub/templates/home.gohtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pub/templates/servicesevents.gohtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pub/templates/ttt.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/pub/templates/ttt.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/templates/TTTservices.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/pub/templates/TTTservices.gohtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,10 +43,16 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pub/templates/ttt.gohtml">
+        <entry file="file://$PROJECT_DIR$/pub/templates/TTTservices.gohtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="258" column="128" selection-start-line="258" selection-start-column="128" selection-end-line="258" selection-end-column="128" />
+            <state relative-caret-position="1461">
+              <caret line="136" column="70" selection-start-line="136" selection-start-column="70" selection-end-line="136" selection-end-column="70" />
+              <folding>
+                <element signature="e#2603#2640#0#HTML" expanded="true" />
+                <element signature="e#2717#2754#0#HTML" expanded="true" />
+                <element signature="e#3820#3860#0#HTML" expanded="true" />
+                <element signature="e#3937#3974#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,16 +142,16 @@
         <option value="$PROJECT_DIR$/pub/templates/TTTabout.gohtml" />
         <option value="$PROJECT_DIR$/pub/templates/TTTevents.gohtml" />
         <option value="$PROJECT_DIR$/pub/templates/TTTportfolio.gohtml" />
-        <option value="$PROJECT_DIR$/pub/templates/TTTservices.gohtml" />
         <option value="$PROJECT_DIR$/pub/templates/TTTsm.gohtml" />
         <option value="$PROJECT_DIR$/pub/templates/upload.gohtml" />
         <option value="$PROJECT_DIR$/pub/templates/TTTfeedback.gohtml" />
         <option value="$PROJECT_DIR$/pub/main.go" />
         <option value="$PROJECT_DIR$/pub/templates/contact.gohtml" />
         <option value="$PROJECT_DIR$/pub/templates/account.html" />
-        <option value="$PROJECT_DIR$/pub/templates/home.gohtml" />
         <option value="$PROJECT_DIR$/pub/templates/TTTshop.gohtml" />
         <option value="$PROJECT_DIR$/pub/templates/ttt.gohtml" />
+        <option value="$PROJECT_DIR$/pub/templates/home.gohtml" />
+        <option value="$PROJECT_DIR$/pub/templates/TTTservices.gohtml" />
       </list>
     </option>
   </component>
@@ -176,6 +177,19 @@
               <item name="TheTalentedTeapot" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheTalentedTeapot" type="462c0819:PsiDirectoryNode" />
               <item name="pub" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheTalentedTeapot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TheTalentedTeapot" type="462c0819:PsiDirectoryNode" />
+              <item name="pub" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheTalentedTeapot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TheTalentedTeapot" type="462c0819:PsiDirectoryNode" />
+              <item name="pub" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="gridgall" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheTalentedTeapot" type="b2602c69:ProjectViewProjectNode" />
@@ -262,7 +276,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21405493" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21405493" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32876712" />
@@ -275,7 +289,7 @@
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32876712" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49596122" visible="true" weight="0.21643835" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49596122" visible="true" weight="0.21643835" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50403875" side_tool="true" weight="0.21643835" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -486,13 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pub/templates/home.gohtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2324">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pub/templates/includes-hdr-ftr.gohtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -568,13 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pub/templates/TTTservices.gohtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pub/templates/TTTshop.gohtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-719">
@@ -596,10 +596,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pub/templates/home.gohtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="230" column="136" selection-start-line="230" selection-start-column="136" selection-end-line="230" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pub/templates/ttt.gohtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
           <caret line="258" column="128" selection-start-line="258" selection-start-column="128" selection-end-line="258" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pub/templates/TTTservices.gohtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1461">
+          <caret line="136" column="70" selection-start-line="136" selection-start-column="70" selection-end-line="136" selection-end-column="70" />
+          <folding>
+            <element signature="e#2603#2640#0#HTML" expanded="true" />
+            <element signature="e#2717#2754#0#HTML" expanded="true" />
+            <element signature="e#3820#3860#0#HTML" expanded="true" />
+            <element signature="e#3937#3974#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
