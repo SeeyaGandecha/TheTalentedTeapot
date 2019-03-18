@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5ecf39b-9b1a-4839-bcf2-04187b49fd1a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pub/img/gridgall/DSC05378.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pub/img/gridgall/DSC06304.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/pub/img/gridgall/DSC06304.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pub/img/gridgall/DSC06411.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pub/img/gridgall/IMG_4781.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pub/templates/TTTservices.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/pub/templates/TTTservices.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/img/gridgall/IMG_5136.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/pub/img/gridgall/IMG_5136.JPG" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,11 +42,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pub/templates/TTTservices.gohtml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="216" column="50" selection-start-line="216" selection-start-column="50" selection-end-line="216" selection-end-column="50" />
+              <caret line="238" column="30" lean-forward="true" selection-start-line="238" selection-start-column="30" selection-end-line="238" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pub/templates/gallery.gohtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-15">
+              <caret line="101" column="15" lean-forward="true" selection-start-line="101" selection-start-column="15" selection-end-line="101" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pub/templates/TTTportfolio.gohtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="539">
+              <caret line="385" column="24" lean-forward="true" selection-start-line="385" selection-start-column="24" selection-end-line="385" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -180,19 +194,6 @@
               <item name="TheTalentedTeapot" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheTalentedTeapot" type="462c0819:PsiDirectoryNode" />
               <item name="pub" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheTalentedTeapot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheTalentedTeapot" type="462c0819:PsiDirectoryNode" />
-              <item name="pub" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="gridgall" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheTalentedTeapot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheTalentedTeapot" type="462c0819:PsiDirectoryNode" />
-              <item name="pub" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -275,7 +276,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21405493" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21405493" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32876712" />
@@ -288,7 +289,7 @@
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32876712" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49596122" visible="true" weight="0.21643835" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49596122" visible="true" weight="0.21643835" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50403875" side_tool="true" weight="0.21643835" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -492,13 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pub/templates/gallery.gohtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-615">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pub/templates/includes-hdr-ftr.gohtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -567,13 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pub/templates/TTTportfolio.gohtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8895">
-          <caret line="139" column="18" lean-forward="true" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pub/templates/TTTshop.gohtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-719">
@@ -612,7 +599,21 @@
     <entry file="file://$PROJECT_DIR$/pub/templates/TTTservices.gohtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="216" column="50" selection-start-line="216" selection-start-column="50" selection-end-line="216" selection-end-column="50" />
+          <caret line="238" column="30" lean-forward="true" selection-start-line="238" selection-start-column="30" selection-end-line="238" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pub/templates/gallery.gohtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="101" column="15" lean-forward="true" selection-start-line="101" selection-start-column="15" selection-end-line="101" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pub/templates/TTTportfolio.gohtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="385" column="24" lean-forward="true" selection-start-line="385" selection-start-column="24" selection-end-line="385" selection-end-column="24" />
         </state>
       </provider>
     </entry>
