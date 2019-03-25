@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5ecf39b-9b1a-4839-bcf2-04187b49fd1a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pub/templates/TTTshop.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/pub/templates/TTTshop.gohtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pub/templates/TTTsm.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/pub/templates/TTTsm.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account.gohtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/_MG_6154.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub/assets/approved/9.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +198,14 @@
               <item name="TheTalentedTeapot" type="b2602c69:ProjectViewProjectNode" />
               <item name="TheTalentedTeapot" type="462c0819:PsiDirectoryNode" />
               <item name="pub" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheTalentedTeapot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TheTalentedTeapot" type="462c0819:PsiDirectoryNode" />
+              <item name="pub" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="approved" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheTalentedTeapot" type="b2602c69:ProjectViewProjectNode" />
@@ -265,7 +286,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21405493" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21405493" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32876712" />
@@ -278,7 +299,7 @@
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32876712" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49596122" visible="true" weight="0.21643835" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49596122" visible="true" weight="0.21643835" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50403875" side_tool="true" weight="0.21643835" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
