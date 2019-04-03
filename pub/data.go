@@ -50,21 +50,21 @@ func load(title string) (*Page, error) {
 	}
 	return &Page{Title: title, Body: body}, nil
 }
-
-func loadSource(title string) (*Page, error) {
-	var db, _ = sql.Open("sqlite3", "cache/db.sqlite3")
-	defer db.Close()
-	var name string
-	var body []byte
-	q, err := db.Query("select title, body from pages where title = '" + title + "' order by timestamp Desc limit 1")
-	if err != nil {
-		return nil, err
-	}
-	for q.Next() {
-		q.Scan(&name, &body)
-	}
-	return &Page{Title: name, Body: body}, nil
-}
+//
+//func loadSource(title string) (*Page, error) {
+//	var db, _ = sql.Open("sqlite3", "cache/db.sqlite3")
+//	defer db.Close()
+//	var name string
+//	var body []byte
+//	q, err := db.Query("select title, body from pages where title = '" + title + "' order by timestamp Desc limit 1")
+//	if err != nil {
+//		return nil, err
+//	}
+//	for q.Next() {
+//		q.Scan(&name, &body)
+//	}
+//	return &Page{Title: name, Body: body}, nil
+//}
 
 func saveData(u *User) error {
 	var db, _ = sql.Open("sqlite3", "cache/db.sqlite3")
@@ -126,6 +126,8 @@ func getUserFromUuid(uuid string) *User {
 	}
 	return &User{Username: un, Fname: fn, Lname: ln, Email: em, Password: pass}
 }
+
+
 
 func enyptPass(password string) string {
 	pass := []byte(password)
